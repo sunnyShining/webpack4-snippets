@@ -13,10 +13,10 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/sunnyShining/toolkitss.git"
+		"url": "https://github.com/sunnyShining/webpack4-snippets.git"
 	},
 	"bugs": {
-		"url": "https://github.com/sunnyShining/toolkitss/issues"
+		"url": "https://github.com/sunnyShining/webpack4-snippets/issues"
 	},
 	"keywords": [
 		"webpack4",
