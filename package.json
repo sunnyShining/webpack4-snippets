@@ -4,29 +4,31 @@
 	"description": "sunshine webpack4 snippets",
 	"version": "0.0.1",
 	"publisher": "sunshine",
-	"license": "MIT",
 	"engines": {
 		"vscode": "^1.44.0"
 	},
-	"categories": [
-		"Snippets"
-	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/sunnyShining/webpack4-snippets.git"
 	},
-	"bugs": {
-		"url": "https://github.com/sunnyShining/webpack4-snippets/issues"
-	},
+	"categories": [
+		"Snippets"
+  ],
+  "icon": "icon.png",
 	"keywords": [
 		"webpack4",
 		"snippets"
 	],
-	"icon": "icon.png",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/sunnyShining/webpack4-snippets/issues"
+	},
 	"contributes": {
-		"snippets": [{
-			"language": "javascript",
-			"path": "./snippets/snippets.json"
-		}]
+		"snippets": [
+			{
+			  "language": "javascript",
+			  "path": "./snippets/snippets.json"
+		  }
+	  ]
 	}
 }
