@@ -1,0 +1,167 @@
+{
+  "template": {
+    "prefix": "wp4-template",
+    "body": [
+      "const path = require('path')",
+      "const webpack = require('webpack')",
+      "const resolvePath = (p) => path.join(__dirname, p)",
+      "module.exports = {",
+      "\tentry: {",
+      "\t\tvendor: './src/index.js$0'",
+      "\t},",
+      "\tmode: 'development',",
+      "\tmodule: {",
+      "\t\trules: []",
+      "\t},",
+      "\tplugins: [],",
+      "\toutput: {",
+      "\t\t$1filename: '[name].bundle.js',",
+      "\t\tpath: path.resolve(__dirname,'dist')",
+      "\t},",
+      "}"
+    ],
+    "description": "For Loop"
+  },
+  "dev-server": {
+    "prefix": "wp4-dev-server",
+    "body": [
+      "devServer: {",
+      "\tcontentBase: './dist',",
+      "\thot: true",
+      "\topen: true",
+      "\tport: 9000",
+      "\thost: '127.0.0.1'",
+      "},"
+    ]
+  },
+  "source-map": {
+    "prefix": "wp4-source-map",
+    "body": ["devtool: 'cheap-module-eval-source-map'"]
+  },
+  "resolve": {
+    "prefix": "wp4-reolve",
+    "body": [
+      "resolve:{",
+      "\textensions: ['.js', '.jsx','.ts', '.tsx' ]",
+      "\talias: {},",
+      "}"
+    ]
+  },
+  "babel-loader": {
+    "prefix": "wp4-babel-loader",
+    "body": [
+      "{",
+      "\ttest: /.jsx?$/,",
+      "\tuse: {",
+      "\t\tloader: \"babel-loader\",",
+      "\t\toptions: {",
+      "\t\t\tpresets: [",
+      "\t\t\t\t[",
+      "\t\t\t\t\t'@babel/preset-env',",
+      "\t\t\t\t\t{",
+      "\t\t\t\t\t\tuseBuiltIns: 'entry',",
+      "\t\t\t\t\t\tcorejs: 3,",
+      "\t\t\t\t\t\tmodules: 'cjs',",
+      "\t\t\t\t\t\ttargets: {",
+      "\t\t\t\t\t\t\tbrowsers: [",
+      "\t\t\t\t\t\t\t\t'Chrome >= 21',",
+      "\t\t\t\t\t\t\t\t'Ie >= 11 ',",
+      "\t\t\t\t\t\t\t\t'Firefox >= 1',",
+      "\t\t\t\t\t\t\t\t'Edge >=13 '",
+      "\t\t\t\t\t\t\t]",
+      "\t\t\t\t\t\t}",
+      "\t\t\t\t\t}",
+      "\t\t\t\t],",
+      "\t\t\t\t'@babel/preset-react'",
+      "\t\t\t],",
+      "\t\t\tplugins: [$0]",
+      "\t\t}",
+      "\t}",
+      "}"
+    ]
+  },
+  "css-loader": {
+    "prefix": "wp4-css-loader",
+    "body": [
+      "{",
+      "\ttest: /.css$/,",
+      "\tuse: [\"style-loader\",\"css-loader\"]",
+      "}"
+    ]
+  },
+  "ts-loader": {
+    "prefix": "wp4-ts-loader",
+    "body": [
+      "{",
+			"\ttest: /.tsx?$/,",
+			"\texclude: /node_modules/,",
+			"\tuse: [{",
+			"\t\tloader: 'babel-loader',",
+      "\t\toptions: {",
+      "\t\t\tpresets: [",
+      "\t\t\t[",
+      "\t\t\t\t'@babel/preset-env',",
+      "\t\t\t\t{",
+      "\t\t\t\t\tuseBuiltIns: 'entry',",
+      "\t\t\t\t\tcorejs: 3,",
+      "\t\t\t\t\tmodules: 'cjs',",
+      "\t\t\t\t\ttargets: {",
+      "\t\t\t\t\t\tbrowsers: [",
+      "\t\t\t\t\t\t\t'Chrome >= 21',",
+      "\t\t\t\t\t\t\t'Ie >= 11 ',",
+      "\t\t\t\t\t\t\t'Firefox >= 1',",
+      "\t\t\t\t\t\t\t'Edge >=13 '",
+      "\t\t\t\t\t\t]",
+      "\t\t\t\t\t}",
+      "\t\t\t\t}",
+      "\t\t\t],",
+      "\t\t\t'@babel/preset-react'",
+      "\t\t],",
+      "\t\tplugins: []",
+      "\t}",
+      "}, {",
+      "\tloader: 'ts-loader',",
+      "\toptions: {",
+      "\t\ttranspileOnly: false,",
+      "\t}",
+      "\t}]",
+      "},"
+    ]
+  },
+  "optimization": {
+    "prefix": "wp4-optimization",
+    "body": [
+      "optimization: {",
+      "\tsplitChunks: {",
+      "\t\tcacheGroups: {",
+      "\t\t\tcommons: {",
+      "\t\t\t\tname: \"commons\",",
+      "\t\t\t\tchunks: \"initial\"",
+      "\t\t\t}",
+      "\t\t}",
+      "\t}",
+      "},"
+    ]
+  },
+  "requireHTMLPlugin": {
+    "prefix": "wp4-requireHTMLPlugin",
+    "body": ["const HTMLWebpackPlugin = require('html-webpack-plugin')"]
+  },
+  "requireCleanPlugin": {
+    "prefix": "wp4-requireCleanPlugin",
+    "body": ["const CleanWebpackPlugin = require('clean-webpack-plugin')"]
+  },
+  "cleanPlugin": {
+    "prefix": "wp4-clean-plugin",
+    "body": ["new CleanWebpackPlugin(['dist']),"]
+  },
+  "HTMLPlugin": {
+    "prefix": "wp4-html-plugin",
+    "body": [
+      "new HTMLWebpackPlugin({",
+      "\ttitle: '$0Title'",
+      "\ttemplate: './src/index.html'",
+      "}),"
+    ]
+  }
+}
