@@ -2,7 +2,7 @@
 	"name": "webpack4-snippets",
 	"displayName": "webpack4-snippets",
 	"description": "sunshine webpack4 snippets",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "sunshine",
 	"engines": {
 		"vscode": "^1.44.0"

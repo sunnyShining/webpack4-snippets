@@ -13,3 +13,6 @@
 - wp4-html-plugin
 - wp4-ts-loader
 - wp4-resolve
+- wp4-eslint-loader
+- wp4-eslintrc
+- wp4-tsconfig

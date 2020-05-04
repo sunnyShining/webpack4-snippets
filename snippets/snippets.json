@@ -89,6 +89,17 @@
       "}"
     ]
   },
+  "eslint-loader": {
+    "prefix": "wp4-eslint-loader",
+    "body": [
+      "{",
+      "test: /.(tsx?|jsx?)$/",
+			"\tloader: 'eslint-loader',",
+			"\texclude: /node_modules/,",
+			"\tenforce: 'pre'",
+			"}"
+    ]
+  },
   "ts-loader": {
     "prefix": "wp4-ts-loader",
     "body": [
@@ -162,6 +173,73 @@
       "\ttitle: '$0Title'",
       "\ttemplate: './src/index.html'",
       "}),"
+    ]
+  },
+  "tsconfig": {
+    "prefix": "wp4-tsconfig",
+    "body": [
+      "{",
+      "\t\"compilerOptions\": {",
+      "\t\t/** 允许编译javascript文件。*/",
+      "\t\t\"allowJs\": true,",
+      "\t\t/** 允许从没有设置默认导出的模块中默认导入。这并不影响代码的输出，仅为了类型检查。 */",
+      "\t\t\"allowSyntheticDefaultImports\": true,",
+      "\t\t/** 不报告执行不到的代码错误。*/",
+      "\t\t\"allowUnreachableCode\": false,",
+      "\t\t/** 以严格模式解析并为每个源文件生成 \"use strict\"语句 */",
+      "\t\t\"alwaysStrict\":true,",
+      "\t\t/** 在 .js文件中报告错误。与 --allowJs配合使用。*/",
+      "\t\t\"checkJs\": true,",
+      "\t\t/** 生成相应的 .d.ts文件。*/",
+      "\t\t\"declaration\": true,",
+      "\t\t/** 错误信息对应语言 */",
+      "\t\t\"locale\": \"zh-cn\",",
+      "\t\t\"baseUrl\": \".\",",
+      "\t\t\"module\": \"commonjs\",",
+      "\t\t\"moduleResolution\": \"node\",",
+      "\t\t\"experimentalDecorators\": true,",
+      "\t\t\"jsx\": \"react\",",
+      "\t\t\"jsxFactory\": \"React.createElement\",",
+      "\t\t\"lib\": [\"DOM\", \"ES2015\"],",
+      "\t\t\"target\": \"ES6\",",
+      "\t\t\"noImplicitReturns\": true,",
+      "\t\t\"preserveConstEnums\": true,",
+      "\t\t\"noUnusedLocals\": true,",
+      "\t\t\"sourceMap\": true,",
+      "\t\t\"strict\": true,",
+      "\t\t\"noImplicitAny\": false",
+      "\t},",
+      "\t\"compileOnSave\": false",
+      "}"
+    ]
+  },
+  "eslintrc": {
+    "prefix": "wp4-eslintrc",
+    "body": [
+      "module.exports = {",
+      "\tparser: '@typescript-eslint/parser',",
+      "\textends: [",
+      "\t\t'plugin:react/recommended',",
+      "\t\t'plugin:@typescript-eslint/recommended',",
+      "\t],",
+      "\tplugins: [",
+      "\t\t'@typescript-eslint'",
+      "\t],",
+      "\tparserOptions: {",
+      "\t\tecmaVersion: 2018,",
+      "\t\tsourceType: 'module',",
+      "\t\tecmaFeatures: {",
+      "\t\t\tjsx: true,",
+      "\t\t},",
+      "\t},",
+      "\tsettings: {",
+      "\t\t'react': {",
+      "\t\t\t'version': 'latest'",
+      "\t\t}",
+      "\t},",
+      "\trules: {",
+      "\t}",
+      "}"
     ]
   }
 }
