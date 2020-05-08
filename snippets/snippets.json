@@ -52,7 +52,7 @@
     "body": [
       "{",
       "\ttest: /.jsx?$/,",
-      "\tuse: {",
+      "\tuse: [{",
       "\t\tloader: \"babel-loader\",",
       "\t\toptions: {",
       "\t\t\tpresets: [",
@@ -76,7 +76,7 @@
       "\t\t\t],",
       "\t\t\tplugins: [$0]",
       "\t\t}",
-      "\t}",
+      "\t}]",
       "}"
     ]
   },
@@ -93,7 +93,7 @@
     "prefix": "wp4-eslint-loader",
     "body": [
       "{",
-      "test: /.(tsx?|jsx?)$/",
+      "test: /.(tsx?|jsx?)$/,",
 			"\tloader: 'eslint-loader',",
 			"\texclude: /node_modules/,",
 			"\tenforce: 'pre'",
